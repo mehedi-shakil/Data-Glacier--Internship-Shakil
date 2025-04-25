@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake Instagram Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <img src="{{ url_for('static', filename='img/header.png') }}" alt="Header">
+</header>
+<main>
+    <h2>Predict Fake Instagram Account</h2>
+
+    <form action="/predict" method="post">
+        <p>Enter account features:</p>
+
+        <!-- 11 inputs with frontend validation -->
+        <input type="text" name="feature1" placeholder="Have Profile Picture ? (1=yes,0=no)" required pattern="^\d+(\.\d+)?$">
+        <input type="text" name="feature2" placeholder="Ratio of digits to username length" required pattern="^\d+(\.\d+)?$">
+        <input type="text" name="feature3" placeholder="Number of words in fullname" required pattern="^\d+(\.\d+)?$">
+        <input type="text" name="feature4" placeholder="Ratio of digits to fullname length" required pattern="^\d+(\.\d+)?$">
+        <input type="text" name="feature5" placeholder="Is Name = Username ? (1=yes,0=no)" required pattern="^\d+(\.\d+)?$">
+        <input type="text" name="feature6" placeholder="Bio Length" required pattern="^\d+(\.\d+)?$">
+        <input type="text" name="feature7" placeholder="Is URL Present ? (1=yes,0=no)" required pattern="^\d+(\.\d+)?$">
+        <input type="text" name="feature8" placeholder="Is Account Private ? (1=yes,0=no)" required pattern="^\d+(\.\d+)?$">
+        <input type="text" name="feature9" placeholder="Number of Posts" required pattern="^\d+(\.\d+)?$">
+        <input type="text" name="feature10" placeholder="Number of Followers" required pattern="^\d+(\.\d+)?$">
+        <input type="text" name="feature11" placeholder="Number of Follows" required pattern="^\d+(\.\d+)?$">
+
+        <button type="submit" class="predict">Predict</button>
+
+        {% if prediction_text %}
+            <div class="result {{ 'genuine' if 'Genuine' in prediction_text else 'fake' }}">
+                {{ prediction_text }}
+            </div>
+        {% endif %}
+    </form>
+</main>
+
+<footer>
+    © MEHEDI HASAN SHAKIL 2025
+</footer>
+
+</body>
+</html>
