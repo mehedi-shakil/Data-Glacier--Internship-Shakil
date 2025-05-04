@@ -1,0 +1,98 @@
+/* ---------- Reset / base ---------- */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+    font-family:"Segoe UI",Helvetica,Arial,sans-serif;
+    background:#f4f6fa;
+    color:#333;
+}
+
+/* ---------- Header banner ---------- */
+header img{
+    width:100%;
+    max-height:180px;
+    object-fit:cover;
+    display:block;
+}
+
+/* ---------- Main card ---------- */
+main{
+    max-width:700px;
+    margin:40px auto 60px;
+    background:#ffffff;
+    padding:40px 50px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ---------- Headings ---------- */
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#222;
+}
+p{margin-bottom:10px;}
+
+/* ---------- Form grid ---------- */
+form{
+    display:grid;
+    grid-template-columns:1fr 1fr;  /* two columns */
+    gap:16px 24px;                 /* row gap & column gap */
+}
+form input[type="text"]{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #ccd2df;
+    border-radius:6px;
+    font-size:15px;
+    transition:border .2s ease;
+}
+form input[type="text"]:focus{
+    outline:none;
+    border-color:#0077ff;
+    box-shadow:0 0 0 2px rgba(0,119,255,.15);
+}
+
+/* Make first <p> span full row */
+form p{
+    grid-column:1 / -1;  /* span both columns */
+    font-weight:600;
+    margin:0 0 4px 0;
+}
+
+/* ---------- Predict button ---------- */
+button.predict{
+    grid-column:1 / -1;         /* full width row */
+    padding:14px;
+    font-size:17px;
+    background:#0077ff;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:background .25s;
+}
+button.predict:hover{
+    background:#005bd1;
+}
+
+/* ---------- Result box ---------- */
+.result{
+    grid-column:1 / -1;
+    margin-top:18px;
+    padding:16px;
+    text-align:center;
+    font-weight:600;
+    border-radius:8px;
+}
+.genuine{background:#e6f9e6;color:#118a00;}
+.fake   {background:#ffeaea;color:#c40000;}
+
+
+/* ---------- Footer (MEHEDI HASAN SHAKIL) ---------- */
+footer{
+    text-align:center;
+    font-size:15px;
+    font-weight:700;   /* bold */
+    color:#333333;     /* bright blue; swap for any accent color */
+    margin-bottom:25px;
+}
