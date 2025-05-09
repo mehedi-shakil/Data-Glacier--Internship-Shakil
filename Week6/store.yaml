@@ -1,0 +1,61 @@
+file_type: csv
+dataset_name: file
+file_name: Individual_Incident_2022
+table_name: incident_data
+inbound_delimiter: ","
+outbound_delimiter: "|"
+skip_leading_rows: 1
+columns:
+  - state
+  - ID
+  - ORI
+  - incident_number
+  - date_HRF
+  - date_SIF
+  - hour
+  - total_offense
+  - total_victim
+  - total_offender
+  - violence_offense
+  - theft_offense
+  - drug_offense
+  - sex_offense
+  - kidnapping_trafficking
+  - other_offense
+  - gun_involvement
+  - drug_involvement
+  - property_value
+  - stolen_motor
+  - male_victim
+  - female_victim
+  - unknown_sex_victim
+  - w_victim
+  - b_victim
+  - i_victim
+  - a_victim
+  - p_victim
+  - unknown_race_victim
+  - minor_victim
+  - non_minor_victim
+  - unknown_age_victim
+  - offender_wi_family
+  - offender_outside_family
+  - offender_not_known
+  - male_offender
+  - female_offender
+  - unknown_sex_offender
+  - w_offender
+  - b_offender
+  - i_offender
+  - a_offender
+  - p_offender
+  - unknown_race_offender
+  - minor_offender
+  - non_minor_offender
+  - unknown_age_offender
+  - completed_attempted2
+  - completed_attempted3
+  - property_description
+  - property_description2
+  - property_description3
+  - race_offender2
